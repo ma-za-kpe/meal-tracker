@@ -1,2 +1,4 @@
 <app-add-meal></app-add-meal>
+<app-meal *ngFor="let meal of foodTracker" [foodTracker]='meal'></app-meal>
+
 <router-outlet></router-outlet>
