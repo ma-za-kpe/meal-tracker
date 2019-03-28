@@ -11,11 +11,13 @@
         </thead>
         <tbody>
           <tr>
-            <td> {{foodTracker.name}} </td>
-            <td> {{foodTracker.details}} </td>
-            <td> {{foodTracker.calories}} </td>
-            <td> <button type="submit" (click)="edit()" class="btn btn-warning btn-block">EDIT</button> </td>
-            <td> <button type="submit" (click)="goalDelete(true)" class="btn btn-danger btn-block">DELETE</button> </td>
+            <td #name> {{foodTracker.name}} </td>
+            <td #details> {{foodTracker.details}} </td>
+            <td #calories> {{foodTracker.calories}} </td>
+            <td> <button type="submit" (click)="edit(name, details, calories)"
+                class="btn btn-warning btn-block">EDIT</button> </td>
+            <td> <button type="submit" (click)="goalDelete(true)" class="btn btn-danger btn-block">DELETE</button>
+            </td>
           </tr>
         </tbody>
       </table>

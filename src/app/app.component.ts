@@ -13,6 +13,7 @@ export class AppComponent {
 
   public buttonName: any = "Show";
   title = "meal-tracker";
+  arr: [];
 
   foodTracker: FoodTracker[];
 
@@ -69,5 +70,20 @@ export class AppComponent {
     if (isComplete) {
       this.foodTracker.splice(index, 1);
     }
+  }
+
+  edit(isedit, index) {
+    if (isedit) {
+      console.log(
+        this.foodTracker[index].name,
+        this.foodTracker[index].calories,
+        this.foodTracker[index].details
+      );
+    }
+    var meals = this.foodTracker.map(meal => {
+      var oneMeal = meal;
+      return oneMeal;
+    });
+    console.log(meals[index]);
   }
 }

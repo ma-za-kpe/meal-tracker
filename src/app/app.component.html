@@ -74,7 +74,8 @@
     </div>
   </div>
 </div>
-<app-meal *ngFor="let meal of foodTracker ;let i = index " (isComplete)='completeGoal($event,i)' [foodTracker]='meal'>
+<app-meal *ngFor="let meal of foodTracker ;let i = index " (isComplete)='completeGoal($event,i)'
+  (isedit)='edit($event, i)' [foodTracker]='meal'>
 </app-meal>
 
 <!-- <app-meal *ngFor="let meal of foodTracker | filter " [foodTracker]='meal'></app-meal> -->
