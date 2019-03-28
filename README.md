@@ -1,5 +1,13 @@
 # MealTracker
 
+## Author
+
+- MAKU PAULINE MAZAKPE
+
+## Description
+
+- A meal tracking application where the user gets to keep track of the food they consume in each day
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
 ## Development server
