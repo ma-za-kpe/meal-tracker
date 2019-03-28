@@ -3,11 +3,11 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { AddMealComponent } from "./add-meal/add-meal.component";
-import { MealComponent } from './meal/meal.component';
+import { MealComponent } from "./meal/meal.component";
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
-  declarations: [AppComponent, AddMealComponent, MealComponent],
+  declarations: [AppComponent, MealComponent, FilterPipe],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
