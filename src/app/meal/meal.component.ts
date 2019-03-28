@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 import { FoodTracker } from "../food-tracker";
 
@@ -9,11 +9,15 @@ import { FoodTracker } from "../food-tracker";
 })
 export class MealComponent implements OnInit {
   @Input() foodTracker: FoodTracker;
+  @Output() isComplete = new EventEmitter<boolean>();
 
   name: string;
   calories: number;
   details: string;
 
+  goalDelete(complete: boolean) {
+    this.isComplete.emit(complete);
+  }
   constructor() {
     // this.foodTracker = new FoodTracker("chipo", 500, "i only had a handful");
   }

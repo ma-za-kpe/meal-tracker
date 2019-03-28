@@ -47,7 +47,8 @@
     <div class="col-lg-12">
       <ng-container *ngIf="show">
         <h1>FOODS WITH CALORIES > 200</h1>
-        <app-meal *ngFor="let meal of filter() " [foodTracker]='meal'></app-meal>
+        <app-meal *ngFor="let meal of filter() ;let i = index " (isComplete)='completeGoal($event,i)'
+          [foodTracker]='meal'></app-meal>
       </ng-container>
     </div>
   </div>
@@ -57,7 +58,8 @@
   <div class="row mt-5 justify-content-center">
     <div class="col-lg-12">
       <ng-container *ngIf="show1">
-        <h1>FOODS WITH CALORIES < 200</h1> <app-meal *ngFor="let meal of filterLess() " [foodTracker]='meal'>
+        <h1>FOODS WITH CALORIES < 200</h1> <app-meal *ngFor="let meal of filterLess() ;let i = index "
+            (isComplete)='completeGoal($event,i)' [foodTracker]='meal'>
             </app-meal>
       </ng-container>
     </div>
@@ -72,7 +74,8 @@
     </div>
   </div>
 </div>
-<app-meal *ngFor="let meal of foodTracker " [foodTracker]='meal'></app-meal>
+<app-meal *ngFor="let meal of foodTracker ;let i = index " (isComplete)='completeGoal($event,i)' [foodTracker]='meal'>
+</app-meal>
 
 <!-- <app-meal *ngFor="let meal of foodTracker | filter " [foodTracker]='meal'></app-meal> -->
 <!-- <app-meal *ngFor="let meal of filter() " [foodTracker]='meal'></app-meal> -->

@@ -64,4 +64,10 @@ export class AppComponent {
     if (this.show1) this.buttonName = "Hide";
     else this.buttonName = "Show";
   }
+
+  completeGoal(isComplete, index) {
+    if (isComplete) {
+      this.foodTracker.splice(index, 1);
+    }
+  }
 }
